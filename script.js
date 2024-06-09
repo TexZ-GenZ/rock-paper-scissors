@@ -44,11 +44,28 @@ currentRound++;
 if (humanScore === 5 || computerScore === 5) {
     choiceScreen.innerHTML = '';
 
+    const outcomePage = document.createElement('div');
+    outcomePage.classList.add("outcomePage");
+
     const outcome = document.createElement('h1');
     outcome.classList.add("outcome");
     humanScore > computerScore ? (outcome.textContent = "You win!"):(outcome.textContent = "Better luck next time.");
 
-    choiceScreen.appendChild(outcome);
+    outcomePage.appendChild(outcome);
+
+    const playAgain = document.createElement("button");
+    playAgain.textContent = "Play Again";
+
+    outcomePage.appendChild(playAgain);
+
+    choiceScreen.appendChild(outcomePage);
+
+    playAgain.addEventListener("click",()=>{
+        humanScore = 0;
+        computerScore = 0;
+        currentRound = 1;
+        createGameScreen();
+    })
 }
 else{
     createGameScreen();

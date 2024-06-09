@@ -90,10 +90,19 @@
     font-size: 20px;
 }
 
-.outcome{
+.outcomePage{
     height: 50vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 15vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5vh;
 }
+
+.outcomePage > button{
+    width: 25vh;
+    height: 15vh;
+    font-size: 30px;
+    background-color: greenyellow;
+}
+
