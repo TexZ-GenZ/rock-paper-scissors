@@ -1,4 +1,68 @@
-console.log("Hello World");
+
+const yes = document.querySelector(".yes");
+const no = document.querySelector(".no");
+const gameScreen = document.querySelector(".choice");
+
+yes.addEventListener("click",()=>{
+
+    gameScreen.innerHTML = '';
+
+    const gameRoundScreen = document.createElement('div');
+    gameRoundScreen.classList.add("gameRoundScreen");
+
+    const roundDetail = document.createElement('h1');
+    roundDetail.textContent = 'Round 1';
+    roundDetail.classList.add("roundDetail");
+
+    const playerChoices = document.createElement('div');
+    playerChoices.classList.add("playerChoices");
+
+    const rock = document.createElement('button');
+    rock.textContent = 'Rock';
+
+    const paper = document.createElement('button');
+    paper.textContent = 'Paper';
+
+    const scissors = document.createElement('button');
+    scissors.textContent = 'Scissors';
+
+
+    playerChoices.appendChild(rock);
+    playerChoices.appendChild(paper);
+    playerChoices.appendChild(scissors);
+
+    gameRoundScreen.appendChild(roundDetail);
+    gameRoundScreen.appendChild(playerChoices);
+
+    gameScreen.appendChild(gameRoundScreen);
+
+    const scoreCard = document.createElement('div');
+    scoreCard.classList.add("scoreCard");
+    const playerScore = document.createElement("h1");
+    playerScore.textContent = "Player Score : 0";
+    const computerScore = document.createElement("h1");
+    computerScore.textContent = "Computer Score : 0";
+
+    scoreCard.appendChild(playerScore);
+    scoreCard.appendChild(computerScore);
+
+    gameScreen.appendChild(scoreCard);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*console.log("Hello World");
 
 let getComputerChoice = ()=>{
     let randomValue = Math.floor(Math.random()*100);
@@ -115,3 +179,5 @@ else if (humanScore > computerScore){
 else{
     alert("A tie!!!!" + `\n Your Score : ${humanScore} \n Computer Score : ${computerScore}`);
 }
+
+*/

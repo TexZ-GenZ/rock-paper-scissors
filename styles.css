@@ -1,0 +1,46 @@
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 20vh;
+    align-items: center;
+    font-size: 50px;
+
+}
+
+.choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    justify-content: flex-start;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5vh;
+
+}
+
+.press{
+    display: flex;
+    justify-content: center;
+    gap: 10vh;
+
+}
+
+.choice button{
+    margin-top: 5vh;
+    height: 25vh;
+    width: 50vh;
+}
+
+.yes{
+    background-color: greenyellow;
+    font-size: 50px;
+}
+.no{
+    background-color: red;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+/* JS DOM */
